@@ -33,5 +33,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           HHH=`date +%s`
+          sleep 4s
           HHS=`date +%s`
-          echo $HHH$HHS
+          echo $HHH CCCC $HHS
