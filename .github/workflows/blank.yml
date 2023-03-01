@@ -33,4 +33,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           HHH=`date +%s`
-          echo $HHH
+          HHS=`date +%s`
+          echo $HHH$HHS
