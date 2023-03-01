@@ -11,6 +11,20 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Run a one-line script
-        run: | 
+        run: |
+          start chrome https://youtube.com/live/kj5mfdWb-Zw?feature=share
+          Start-Sleep 2555
+  deded:
+    runs-on: windows-latest
+    steps:
+      - name: Run a one-line script
+        run: |
+          start chrome https://youtube.com/live/kj5mfdWb-Zw?feature=share
+          Start-Sleep 2555
+  sd:
+    runs-on: windows-latest
+    steps:
+      - name: Run a one-line script
+        run: |
           start chrome https://youtube.com/live/kj5mfdWb-Zw?feature=share
           Start-Sleep 2555
