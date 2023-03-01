@@ -12,7 +12,8 @@ jobs:
         run: |
           for i in {1..5}
           do
-            AAA=`cat `wget https://raw.githubusercontent.com/mooghen1/vvvv/main/te.txt``
+            RRR=`wget https://raw.githubusercontent.com/mooghen1/vvvv/main/te.txt`
+            AAA=`cat te.txt`
             echo $AAA
               if [ $AAA -eq 0 ]
               then
