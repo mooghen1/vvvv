@@ -11,4 +11,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           curl -H "Authorization: Bearer AIzaSyB1Q2HbkI0thCaJQuPOfAbZbugzagBALH4" -H "Accept: application/json" -H "Content-Type: application/json" --data "{'id':'STREAMID_FROM_DEFAULT_IN_STATUS_CALL','snippet':{'title':'test','description':'test.'},'status':{'streamStatus':'ready'},'cdn':{'ingestionType':'rtmp','frameRate':'variable','resolution':'variable','ingestionInfo':{'streamName':'STREAM_NAME_FROM_DEFAULT_IN_STATUS_CALL'}}}" --request POST "https://youtube.googleapis.com/youtube/v3/liveStreams?part=snippet,status,cdn
-          UC90bziWyhgAJfGtNzlhoF3A
+          
