@@ -19,6 +19,7 @@ jobs:
               if [ $AAA -eq 0 ]
               then
                 echo 0
+                done
               else
                 echo 1
               fi
