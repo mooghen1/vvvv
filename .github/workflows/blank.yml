@@ -15,7 +15,6 @@ jobs:
             rm te.txt
             wget https://raw.githubusercontent.com/mooghen1/vvvv/main/te.txt
             AAA=`cat te.txt`
-            echo $AAA
               if [ $AAA -eq 0 ]
               then
                 echo 0
