@@ -13,6 +13,7 @@ jobs:
           while :
           do
             rm te.txt
+            sleep 1
             wget https://raw.githubusercontent.com/mooghen1/vvvv/main/te.txt
             AAA=`cat te.txt`
               if [ $AAA -eq 0 ]
