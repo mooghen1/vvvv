@@ -19,7 +19,7 @@ jobs:
               if [ $AAA -eq 0 ]
               then
                 echo 0
-                done
+                break
               else
                 echo 1
               fi
