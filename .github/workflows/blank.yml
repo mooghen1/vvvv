@@ -10,6 +10,6 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run a multi-line script
         run: |
-          wget https://dl4002.ymcdn.website/c264b34fc82571bde3669f2e066dc867/B7QzbCViK0E?dl=1
+          wget https://dl2.dlmate44.xyz/?file=M3R4SUNiN3JsOHJ6WWRQNXNPUFN2cFdxRVJIOGxmWTNqSjRkeGgwcUQ2d0hpNWc4M3VmcmNaa2RmT3dpeEpMcFd1cGI1WFdOSVp1dUZDTENoSjByUzJ1RTVKMGw4aEhzd01VSFdNUjRXQkd6dHZPd256STl3aVh3YmN5R01KeDdKa05wb2xBbzl5aXhoOVhCdXdic3RtM2pxbDNRS2lJRHZqNDBMZlRFK2NJTmgwL1NZT0x3eHBJQTZIUzU3NG9hbjZLNzRFU2s1WkJwaWNaM2ZYSjlXTUI0bDVmbGpMYkxvRWhFcWIxYTMxVzBvUENqRXBjNEdmalBMMkFvYjNSZHZyNjVHZ2tieVJvZDhHbTkvZkowcUhNZkxLUjN2QT09
           ls
           
