@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run a multi-line script
         run: |
-          sudo apt-get install youtube-dl ffmpeg -y
-          youtube-dl https://www.youtube.com/watch?v=B7QzbCViK0E
+          sudo apt-get install ffmpeg -y
+          wget https://github.com/mooghen1/manga-list/releases/download/v1.1.1/tets1.rar
           ls
           
