@@ -13,6 +13,6 @@ jobs:
           with-ffmpeg: true
       - name: Run a multi-line script
         run: |
-          yt-dlp https://www.youtube.com/watch?v=B7QzbCViK0E
+          yt-dlp --downloader aria2c -P cvideo  https://www.youtube.com/watch?v=B7QzbCViK0E
           ls
           
