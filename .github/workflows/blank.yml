@@ -11,5 +11,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           sudo apt-get install youtube-dl ffmpeg -y
-          youtube-dl -x https://www.youtube.com/watch?v=WwxBriiftt4
+          youtube-dl https://www.youtube.com/watch?v=WwxBriiftt4
+          ls
           
