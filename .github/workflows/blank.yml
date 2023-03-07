@@ -10,7 +10,6 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run a multi-line script
         run: |
-          sudo apt-get install ffmpeg -y
-          wget https://github.com/mooghen1/manga-list/releases/download/v1.1.1/tets1.rar
+          wget https://dl4002.ymcdn.website/c264b34fc82571bde3669f2e066dc867/B7QzbCViK0E?dl=1
           ls
           
