@@ -8,8 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: AnimMouse/setup-yt-dlp@v1
+        with:
+          with-ffmpeg: true
       - name: Run a multi-line script
         run: |
-          wget "https://rr1---sn-cp1oxu-jb3k.googlevideo.com/videoplayback?expire=1678182119&ei=h7IGZJqFDaSZ9fwP5I6xwAs&ip=43.252.106.246&id=o-AAVaEnOJpbKx-ojcP0YFX0jqAB5iAMXRMcbozf-tGXje&itag=160&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C278%2C394%2C395%2C396%2C397%2C398%2C399&source=youtube&requiressl=yes&mh=7k&mm=31%2C26&mn=sn-cp1oxu-jb3k%2Csn-30a7ynek&ms=au%2Conr&mv=m&mvi=1&pl=24&initcwndbps=196250&spc=H3gIhniqR7JIYS9GNfZe4PbAztu-k-X8CV1giM2DB-BzXzIZ-I_deXh8gD6ZrZM&vprv=1&mime=video%2Fmp4&ns=iQkpblVO9gzOfWMQIBWEVusL&gir=yes&clen=95599256&dur=11871.726&lmt=1676255521111351&mt=1678160220&fvip=4&keepalive=yes&fexp=24007246&c=WEB&txp=553D434&n=WzH9X-SqQzo8vw&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cspc%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cdur%2Clmt&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRAIgakraQr8lr0XAyHKy36rsLaOxXjCZcyEX8RrnYf4B4FYCIDiOHxRq8SeVFzZdfDLgmTLcjHok8XjXyCTy55qcRPhj&sig=AOq0QJ8wRQIgcHnn7GgkWOkxS61fPL2Rfaaf9KQk5Np6zAuKzLSETocCIQCQD4Ityq5w14VjZSD-V3eSAn2P3X_xoFaKUu90NpF1vA%3D%3D&pot=Dzrun7JKoiTjOtY7jZUY2Kq7eFAZzK0uV2o1NN1soczvsy88qGqRI9ykZh-61D4Kpc_y4Q0LMoCn9bFhCtKAILE6BkFb2ZYfC6jm97rNDZ4B7TrkiQ_GTSPPq_0UTJtkjeJJMK-lBUiUF09Siv2ejR8%3D"
+          yt-dlp https://www.youtube.com/watch?v=B7QzbCViK0E
           ls
           
