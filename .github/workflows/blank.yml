@@ -15,7 +15,7 @@ jobs:
         run: yt-dlp --downloader aria2c -P cvideo  https://www.youtube.com/watch?v=B7QzbCViK0E
       - run: sudo apt install -y ffmpeg
       - name: Run a multi-line script
-        run: mv cvideo\*.mp4 cvideo.mp4
+        run: mv cvideo/*.mp4 cvideo.mp4
       - run: |
           ffmpeg -i cvideo.mp4 -vn audio.mp3
           ls
