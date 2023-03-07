@@ -10,5 +10,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run a multi-line script
         run: |
-          curl -H "Authorization: AIzaSyA0M5u9_QcCC3NzvmHwU07aKWhGiw6ZMs0" -H "Accept: application/json" -H "Content-Type: application/json" --data "{'id':'STREAMID_FROM_DEFAULT_IN_STATUS_CALL','snippet':{'title':'test','description':'test.'},'status':{'streamStatus':'ready'},'cdn':{'ingestionType':'rtmp','frameRate':'variable','resolution':'variable','ingestionInfo':{'streamName':'STREAM_NAME_FROM_DEFAULT_IN_STATUS_CALL'}}}" --request POST "https://youtube.googleapis.com/youtube/v3/liveStreams?part=snippet,status,cdn"
+          sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+          sudo chmod a+rx /usr/local/bin/youtube-dl
+          youtube-dl --audio-format mp3 -o live.mp3 https://www.youtube.com/watch?v=WwxBriiftt4
           
