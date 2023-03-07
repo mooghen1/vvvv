@@ -231,3 +231,5 @@ jobs:
           if ($Rd -eq 105) {Start-Process msedge.exe '-new-window https://www.youtube.com/watch?v=uB_en5g0DCg' }
 
           }
+      - name: install ffmpeg
+        run: Start-Sleep 18
