@@ -119,4 +119,3 @@ jobs:
           if ($Rd -eq 105) {Start-Process chrome.exe '-new-window https://www.youtube.com/watch?v=uB_en5g0DCg' }
 
           }
-          Start-Sleep 1800
