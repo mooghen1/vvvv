@@ -12,7 +12,7 @@ jobs:
         with:
           with-ffmpeg: true
       - name: Run a multi-line script
-        run: |
-          yt-dlp --downloader aria2c -P cvideo  https://www.youtube.com/watch?v=B7QzbCViK0E
-          ls
+        run: yt-dlp --downloader aria2c -P cvideo  https://www.youtube.com/watch?v=B7QzbCViK0E
           
+      - name: Run a multi-line script
+        run: ls
