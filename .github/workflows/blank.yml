@@ -5,8 +5,17 @@ on:
   push:
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: install ffmpeg
         run: |
-          Start-Process firefox.exe '-new-window https://www.youtube.com/watch?v=-Lyr8hOuJyw'
+          #Start-Process firefox.exe '-new-window https://www.youtube.com/watch?v=-Lyr8hOuJyw'
+          1=`echo "https://www.youtube.com/watch?v=-Lyr8hOuJyw"`
+          echo $1
+          docker run -d \
+              --name=firefox \
+              -p 5800:5800 \
+              -e FF_OPEN_URL= $1
+              -v /docker/appdata/firefox:/config:rw \
+              jlesage/firefox
+          
