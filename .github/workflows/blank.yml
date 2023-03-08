@@ -10,7 +10,7 @@ jobs:
       - name: install ffmpeg
         run: |
           
-          1=$(echo "https://www.youtube.com/watch?v=-Lyr8hOuJyw")
+          1=${echo "https://www.youtube.com/watch?v=-Lyr8hOuJyw"}
           echo $1
           docker run -d \
               --name=firefox \
