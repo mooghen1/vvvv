@@ -10,12 +10,12 @@ jobs:
       - name: install ffmpeg
         run: |
           
-          export 1="https://www.youtube.com/watch?v=-Lyr8hOuJyw"
-          echo $1
+          xxx="https://www.youtube.com/watch?v=-Lyr8hOuJyw"
+          echo $xxx
           docker run -d \
               --name=firefox \
               -p 5800:5800 \
-              -e FF_OPEN_URL= $1
+              -e FF_OPEN_URL=$xxx
               -v /docker/appdata/firefox:/config:rw \
               jlesage/firefox
           
