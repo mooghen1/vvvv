@@ -22,7 +22,7 @@ jobs:
           cd youtube-upload-master
           sudo python setup.py install
           cd ..
-          mv .client_secrets.json /home/runner/.client_secrets.json
+          mv .client_secrets.json /home/runner/client_secrets.json
           youtube-upload --title="A.S. Mutter" cvideo.mp4
           exit 1
       - name: Run a multi-line script
