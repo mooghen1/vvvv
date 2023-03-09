@@ -16,23 +16,12 @@ jobs:
       - name: Run a multi-line script
         run: mv cvideo/*.mp4 cvideo.mp4
       - run: |
-          mkdir a
-          cd a
-          wget https://github.com/googleapis/google-api-python-client/archive/refs/heads/main.zip
-          7z x main.zip
-          ls
-          https://github.com/googleapis/oauth2client/archive/refs/heads/master.zip
-          wget https://google-api-python-client.googlecode.com/files/google-api-python-client-1.2.tar.gz
-          tar xzvf google-api-python-client-1.2.tar.gz
-          cd google-api-python-client-1.2/
-          mv apiclient/ oauth2client/ uritemplate/ ..
-          cd ..
-          wget https://github.com/youtube/api-samples/raw/master/python/upload_video.py
-          git add cvideo.mp4 apiclient/ oauth2client/ uritemplate/ upload_video.py
-          git config --global user.name 'Your Name'
-          git config --global user.email 'your-username@users.noreply.github.com'
-          git commit -am "Automated report"
-          git push
+          sudo pip install --upgrade google-api-python-client oauth2client progressbar2
+          wget https://github.com/tokland/youtube-upload/archive/master.zip
+          unzip master.zip
+          cd youtube-upload-master
+          sudo python setup.py install
+          youtube-upload --title="A.S. Mutter" cvideo.mp4
           exit 1
       - name: Run a multi-line script
         run: mv cvideo/*.mp4 cvideo.mp4
