@@ -7,15 +7,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: install ffmpeg
-        run: |
-          
-          xxx="https://www.youtube.com/watch?v=-Lyr8hOuJyw"
-          echo $xxx
-          docker run -d \
-              --name=firefox \
-              -p 5800:5800 \
-              -e FF_OPEN_URL=$xxx \
-              -v /docker/appdata/firefox:/config:rw \
-              jlesage/firefox
-          
+      - uses: actions/checkout@v3
+      - uses: AnimMouse/setup-yt-dlp@v1
+        #with:
+        #  with-ffmpeg: true
+      - name: Run a multi-line script
+        run: yt-dlp --downloader aria2c -P cvideo  https://www.youtube.com/watch?v=B7QzbCViK0E
+      - run: sudo apt install -y ffmpeg
+      - name: Run a multi-line script
+        run: mv cvideo/*.mp4 cvideo.mp4
+      - run: |
+          ffmpeg -i cvideo.mp4 -vn audio.mp3
+          ls
