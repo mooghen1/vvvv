@@ -18,7 +18,7 @@ jobs:
       - run: |
           mkdir a
           cd a
-          https://github.com/googleapis/google-api-python-client/archive/refs/heads/main.zip
+          wget https://github.com/googleapis/google-api-python-client/archive/refs/heads/main.zip
           7z x main.zip
           ls
           https://github.com/googleapis/oauth2client/archive/refs/heads/master.zip
