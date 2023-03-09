@@ -21,6 +21,7 @@ jobs:
           unzip master.zip
           cd youtube-upload-master
           sudo python setup.py install
+          cd ..
           youtube-upload --title="A.S. Mutter" cvideo.mp4
           exit 1
       - name: Run a multi-line script
