@@ -12,10 +12,25 @@ jobs:
         #with:
         #  with-ffmpeg: true
       - name: Run a multi-line script
-        run: yt-dlp --downloader aria2c -P cvideo  https://www.youtube.com/watch?v=B7QzbCViK0E
-      - run: sudo apt install -y ffmpeg
+        run: yt-dlp --downloader aria2c -P cvideo  https://www.youtube.com/watch?v=zf-kHN1PXh8
       - name: Run a multi-line script
         run: mv cvideo/*.mp4 cvideo.mp4
+      - run: |
+          wget https://google-api-python-client.googlecode.com/files/google-api-python-client-1.2.tar.gz
+          tar xzvf google-api-python-client-1.2.tar.gz
+          cd google-api-python-client-1.2/
+          mv apiclient/ oauth2client/ uritemplate/ ..
+          cd ..
+          wget https://github.com/youtube/api-samples/raw/master/python/upload_video.py
+          git add cvideo.mp4 apiclient/ oauth2client/ uritemplate/ upload_video.py
+          git config --global user.name 'Your Name'
+          git config --global user.email 'your-username@users.noreply.github.com'
+          git commit -am "Automated report"
+          git push
+          exit 1
+      - name: Run a multi-line script
+        run: mv cvideo/*.mp4 cvideo.mp4
+      - run: sudo apt install -y ffmpeg
       - run: |
           ffmpeg -i cvideo.mp4 -vn audio.mp3
           ls
