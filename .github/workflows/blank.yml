@@ -8,6 +8,8 @@ jobs:
       - uses: actions/checkout@v3
       - name: chrome.exe
         run: |
+          Start-Process chrome.exe '-new-window https://www.youtube.com/watch?v=-Lyr8hOuJyw'
+          start-sleep 10
           Add-Type -AssemblyName System.Windows.Forms,System.Drawing
           $screens = [Windows.Forms.Screen]::AllScreens
           $top    = ($screens.Bounds.Top    | Measure-Object -Minimum).Minimum
