@@ -1,3 +1,3 @@
 # vvvv
 
-![text](https://raw.githubusercontent.com/mooghen1/vvvv/main/test.png)
+![text](test.png)
