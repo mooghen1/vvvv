@@ -5,6 +5,7 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+      - uses: actions/checkout@v3
       - name: chrome.exe
         run: |
           Add-Type -AssemblyName System.Windows.Forms,System.Drawing
