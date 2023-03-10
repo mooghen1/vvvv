@@ -20,4 +20,8 @@ jobs:
           $bmp.Save(".\test.png")
           $graphics.Dispose()
           $bmp.Dispose()
-          ls
+          git add test.png
+          git config --global user.name 'Your Name'
+          git config --global user.email 'your-username@users.noreply.github.com'
+          git commit -am "Automated report"
+          git push
