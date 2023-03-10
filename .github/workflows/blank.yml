@@ -3,11 +3,9 @@ on:
   push:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: browser-actions/setup-chrome@v1
       - run: |
-          export DISPLAY=$HOST_IP:10.0
           chrome https://www.youtube.com/watch?v=fKlrKDuLjBk&list=PLo7Xh7fZc_kUgUEIh5EpPcfZvSU8H2M-T&index=62
         
